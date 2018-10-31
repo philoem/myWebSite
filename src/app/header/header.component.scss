@@ -1,0 +1,41 @@
+#navBar
+{
+    height: 95px;
+    background-color: rgba(5, 77, 140, 0.644);
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.452);
+    font-family: 'roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+nav a, ul li a, .navbar-text
+{
+    color: rgba(255,255,255, 0.90);
+    word-spacing: 3.5px;
+}
+ul li a:hover
+{
+    color: rgba(0,0,0,0.8);
+}
+#title_navbar
+{
+    color: rgba(0,0,0,0.8);
+    text-shadow: 4px 4px 1px rgba(54, 54, 54, 0.9);
+    font-style: italic;
+    font-weight: 900;
+}
+#title_navbar:hover
+{
+    color: rgba(255,255,255, 0.90);
+}
+/* Le lien Github */
+#forkMe
+{
+    position: relative;
+    top: 20px;
+    right: -15px;
+    border: 0;
+    height: 135px;
+}
+.navbar-text
+{
+    margin-right: -25px;
+}
