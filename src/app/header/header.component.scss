@@ -35,7 +35,45 @@ ul li a:hover
     border: 0;
     height: 135px;
 }
-.navbar-text
+#navbarToggleExternalContent
 {
-    margin-right: -25px;
+    position: relative;
+    top: 15px;
 }
+/* Pour la navbar minifiée */
+ul
+{
+    position: relative;
+    z-index: 1000;
+    list-style-type: none;
+}
+li.nav-item.active
+{
+    position: relative;
+    z-index: 1000;
+}
+a:hover
+{
+    text-decoration: none;
+}
+button
+{
+    background-color: rgba(98, 165, 223, 0.781);
+}
+
+@media screen and (max-width: 991px) {
+
+    #navbarText
+    {
+        margin-left: 115px;
+        display: block;
+        position: absolute;
+    }
+    #navbarText > ul > li, img, #myName
+    {
+        display: none;
+    }
+}
+
+
+

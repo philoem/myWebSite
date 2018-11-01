@@ -10,11 +10,13 @@ import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { ContentListComponent } from './content/content-list/content-list.component';
 import { ContentFormComponent } from './content/content-form/content-form.component';
+import { BoostComponent } from './content/boost/boost.component';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
   { path: 'content/list', component: ContentListComponent },
   { path: 'content/form', component: ContentFormComponent },
+  { path: 'content/boost', component: BoostComponent },
   { path: '', redirectTo: 'content', pathMatch: 'full' },
   { path: '**', redirectTo: 'content' }
 
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     FooterComponent,
     ContentComponent,
     ContentListComponent,
-    ContentFormComponent
+    ContentFormComponent,
+    BoostComponent
   ],
   imports: [
     BrowserModule,
