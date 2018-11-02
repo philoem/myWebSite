@@ -11,9 +11,12 @@ import { ContentComponent } from './content/content.component';
 import { ContentListComponent } from './content/content-list/content-list.component';
 import { ContentFormComponent } from './content/content-form/content-form.component';
 import { BoostComponent } from './content/boost/boost.component';
+import { ContactService } from './services/contact.service';
+import { ProfilComponent } from './content/profil/profil.component';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
+  { path: 'content/profil', component: ProfilComponent },
   { path: 'content/list', component: ContentListComponent },
   { path: 'content/form', component: ContentFormComponent },
   { path: 'content/boost', component: BoostComponent },
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     ContentComponent,
     ContentListComponent,
     ContentFormComponent,
-    BoostComponent
+    BoostComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

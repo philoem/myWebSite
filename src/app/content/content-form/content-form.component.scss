@@ -5,7 +5,8 @@
     background: rgba(0,0,0,0.6);
     box-shadow: 0px 0px 10px 3px grey;
     font-family: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+    padding-bottom: 7px;
+    border-radius: 8px;
 }
 h2
 {
@@ -20,9 +21,7 @@ address, p
 }
 hr
 {
-    position: relative;
     background-color: rgba(255, 255, 255, 0.4);
-    height: 1px;
 }
 h1
 {
@@ -35,4 +34,19 @@ label
     color: rgba(192, 189, 189, 0.8);
     word-spacing: 2px;
     font-family: 'roboto';
+}
+h4
+{
+    font-family: 'roboto';
+    font-size: 1.2em;
+    font-weight: 700;
+    color: rgba(192, 189, 189, 0.9);
+}
+#mailOk p
+{
+    top: 50px;
+    position: relative;
+    font-family: 'roboto';
+    font-weight: 700;
+    color: rgb(255, 255, 255);
 }

@@ -1,13 +1,20 @@
 <div class="container contact_form">
-  <form [formGroup]="contentForm" (ngSubmit)="onSaveContentForm()">
+  <form [formGroup]="contentForm" (ngSubmit)="onSaveContentForm()" >
     <h1>Laissez-moi un message</h1>
-    <hr>
+    <hr class="my-4">
     <div class="row">
       <div class="col-md-4 address">
-        <h2>Mes coordonnées</h2>
+        <h2><strong>Mes coordonnées</strong></h2>
+        <h4>Philippe Chamard</h4>
+        <p><strong>Développer Web Freelance</strong></p>
         <address><i class="fa fa-road"></i>  78100 Saint-Germain En Laye </address>
         <p><i class="fa fa-envelope"></i>  philoem24@gmail.com</p>
         <p><i class="fa fa-phone"></i> 06.88.95.18.49</p>
+        <div class="col-md-10 address" id="mailOk" *ngIf="isAvalaible">
+          <p>Votre message a bien été envoyé!</p>
+          <p>Je vous répondrai dans les plus brefs délais.</p>
+          <p>A bientôt</p>
+        </div>
       </div>
       <div class="col-md-8">
         <div class="form-group">

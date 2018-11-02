@@ -1,0 +1,30 @@
+.container
+{
+    margin-top: 80px;
+}
+h1
+{
+    position: relative;
+    text-align: center;
+    color: rgb(231, 229, 229);
+    word-spacing: 4px;
+    font-family: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.carousel-inner
+{
+    border-radius: 8px;
+}
+.carousel-control-prev
+{
+    left: -135px;
+    border-radius: 8px;
+}
+.carousel-control-next
+{
+    right: -130px;
+    border-radius: 8px;
+}
+.carousel-indicators
+{
+    bottom: -45px;
+}

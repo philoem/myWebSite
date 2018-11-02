@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Content } from 'src/app/models/content.model';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-content-form',
@@ -11,8 +12,9 @@ import { Content } from 'src/app/models/content.model';
 export class ContentFormComponent implements OnInit {
 
   contentForm: FormGroup;
-
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  isAvalaible = false;
+  
+  constructor(private formBuilder: FormBuilder, private router: Router, private contactsService: ContactService) { }
 
   ngOnInit() {
     this.initForm();
@@ -27,6 +29,7 @@ export class ContentFormComponent implements OnInit {
       message: ['', Validators.required]
     });
   }
+  
 
   onSaveContentForm() {
     const name = this.contentForm.get('name').value;
@@ -36,10 +39,15 @@ export class ContentFormComponent implements OnInit {
     const message = this.contentForm.get('message').value;
     const newContent = new Content(name, society, mail, suject, message);
 
-    alert('Votre message a bien été enregistré !')
-    
-    //this.booksService.createNewBook(newBook);
-    this.router.navigate(['/content/form']);
+    if(this.contentForm.valid) {
+      this.contactsService.createNewContact(newContent);
+      this.router.navigate(['/content/form']);
+      this.isAvalaible = true;
+      this.contentForm.reset();
+    }
+
   }
+
+  
 
 }
