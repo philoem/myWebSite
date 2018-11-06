@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 import { ContentListComponent } from './content/content-list/content-list.component';
 import { ContentFormComponent } from './content/content-form/content-form.component';
@@ -29,7 +28,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
     ContentComponent,
     ContentListComponent,
     ContentFormComponent,

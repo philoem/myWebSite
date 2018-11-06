@@ -13,7 +13,7 @@ export class ContentFormComponent implements OnInit {
 
   contentForm: FormGroup;
   isAvalaible = false;
-  
+   
   constructor(private formBuilder: FormBuilder, private router: Router, private contactsService: ContactService) { }
 
   ngOnInit() {
@@ -37,7 +37,8 @@ export class ContentFormComponent implements OnInit {
     const mail = this.contentForm.get('mail').value;
     const suject = this.contentForm.get('suject').value;
     const message = this.contentForm.get('message').value;
-    const newContent = new Content(name, society, mail, suject, message);
+    const date = Date();
+    const newContent = new Content(name, society, mail, suject, message, date);
 
     if(this.contentForm.valid) {
       this.contactsService.createNewContact(newContent);
@@ -47,7 +48,6 @@ export class ContentFormComponent implements OnInit {
     }
 
   }
-
   
 
 }
