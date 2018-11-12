@@ -16,7 +16,7 @@ export class ContactService {
     }
 
     saveContacts() {
-        firebase.database().ref('/contacts').set(this.contacts);
+        firebase.database().ref('/contacts').update(this.contacts);
     }
 
     createNewContact(newContent: Content) {

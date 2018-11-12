@@ -18,14 +18,33 @@ h3
     font-size: 2em;
     word-spacing: 1px;
 }
+#link
+{
+    top: 50px;
+}
 a
 {
     font-family: 'roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
     margin: 10px;
     top: 0;
+    box-shadow: 0 0 20px rgba(176,255,95,.3),
+                0 0 40px rgba(176,255,95,.5),
+                0 0 60px rgba(176,255,95,.7),
+                0 0 80px rgba(176,255,95,0.8);
+    transition: .3s all ease-in-out;
 }
-
+a:hover
+{
+    letter-spacing: 5px;
+    box-shadow: 0 0 0 30px rgba(176,255,95,.1),
+                0 0 0 60px rgba(176,255,95,.1),
+                0 0 0 120px rgba(176,255,95,.1),
+                0 0 0 240px rgba(176,255,95,.1),
+                0 0 0 480px rgba(176,255,95,.1),
+                0 0 0 960px rgba(176,255,95,.1),
+                0 0 0 1920px rgba(176,255,95,.1);
+}
 @media screen and (max-width: 991px) {
 
     img

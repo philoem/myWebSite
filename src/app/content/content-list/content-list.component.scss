@@ -1,6 +1,6 @@
 .container
 {
-    margin-top: 80px;
+    margin-top: 60px;
 }
 h1
 {
@@ -9,6 +9,20 @@ h1
     color: rgb(231, 229, 229);
     word-spacing: 4px;
     font-family: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h5
+{
+    color: #1C2331;
+    margin-top: 10px;
+}
+.link_site
+{
+    color: white;
+}
+.link_site:hover
+{
+    color: #1C2331;
+    text-decoration: none;
 }
 .carousel-inner
 {

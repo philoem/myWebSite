@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
 
 @Component({
@@ -6,7 +6,7 @@ import * as firebase from 'firebase';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'myWebSite';
 
   constructor() {
@@ -19,5 +19,8 @@ export class AppComponent {
       messagingSenderId: "141026132225"
     };
     firebase.initializeApp(config);
+  }
+  ngOnInit() {
+    document.body.style.background = "url('/assets/img/color1.png') top center no-repeat fixed";
   }
 }

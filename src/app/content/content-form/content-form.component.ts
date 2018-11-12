@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Content } from 'src/app/models/content.model';
 import { ContactService } from 'src/app/services/contact.service';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-content-form',
@@ -39,13 +40,22 @@ export class ContentFormComponent implements OnInit {
     const message = this.contentForm.get('message').value;
     const date = Date();
     const newContent = new Content(name, society, mail, suject, message, date);
-
-    if(this.contentForm.valid) {
+    const html = `
+      <div>From: ${name}</div>
+      <div>Email: <a href="mailto:${mail}">${mail}</a></div>
+      <div>Date: ${date}</div>
+      <div>Message: ${message}</div>
+    `;
+    let formRequest = { name, mail, message, date, html };
+    //if(this.contentForm.valid) {
+      firebase.database().ref('/messages').push(formRequest);
+    
       this.contactsService.createNewContact(newContent);
       this.router.navigate(['/content/form']);
       this.isAvalaible = true;
-      this.contentForm.reset();
-    }
+    //}
+
+    this.contentForm.reset();
 
   }
   
