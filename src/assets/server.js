@@ -72,51 +72,52 @@
 //server.listen(4200);
 
 
-let express = require('express');
-let bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
-let app = express();
+//let express = require('express');
+//let bodyParser = require('body-parser');
+//const nodemailer = require('nodemailer');
+//let app = express();
 
-app.use(express.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.set('view engine', 'html');
+//app.use(express.json());
+//app.use(bodyParser.urlencoded({extended: true}));
+//app.set('view engine', 'html');
+//
+//app.get('/', function(req, res, next) {
+//    res.render('content-form.component');
+//});
 
-app.get('/', function(req, res, next) {
-    res.render('content-form.component');
-});
-
-app.post('/content/form', function(req, res) {
+//app.post('/content/form', function(req, res) {
+    //res.write('TEST')
     /* Notre code pour nodemailer */
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'philoem24@gmail.com',
-            pass: 'sunny321654987'
-        }
-    });
-    let mailOptions = {
-        from: req.body.sender,
-        to: req.body.destination,
-        subject: req.body.subject,
-        text: req.body.message,
-        html: '<b>' + req.body.message + '</b>'
-    };
-    transporter.sendMail(mailOptions, function(error, info){
-        if(error){
-           return console.log(error);
-        }
-        console.log('Message sent: ' + info.response);
-   });
-   
-   transporter.close();
-});
+    //let transporter = nodemailer.createTransport({
+    //    service: 'gmail',
+    //    auth: {
+    //        user: 'philoem24@gmail.com',
+    //        pass: 'sunny321654987'
+    //    }
+    //});
+    //let mailOptions = {
+    //    from: req.body.sender,
+    //    to: req.body.destination,
+    //    subject: req.body.subject,
+    //    text: req.body.message,
+    //    html: '<b>' + req.body.message + '</b>'
+    //};
+    //transporter.sendMail(mailOptions, function(error, info){
+    //    if(error){
+    //       return console.log(error);
+    //    }
+    //    console.log('Message sent: ' + info.response);
+    //});
+   //
+    //transporter.close();
+//});
 
-app.use(function(req, res) {
-    res.sendStatus(404);
-});
+//app.use(function(req, res) {
+//    res.sendStatus(404);
+//});
 
-app.listen(8080);
-console.log('Le serveur App est en cours...')
+//app.listen(8080);
+//console.log('Le serveur App est en cours...')
 
 //const nodemailer = require('nodemailer');
 //function sending() {
@@ -149,3 +150,77 @@ console.log('Le serveur App est en cours...')
 //    
 //}
 //sending();
+
+//let http = require('http')
+//let server = http.createServer()
+//let port = 8080
+//
+//server.on('request', (req, resp) =>  {
+//    resp.writeHead(200, {
+//        'Content-type': 'text/html; charset=utf-8'
+//    })
+//    resp.end('je fais un test ici')
+//
+//})
+//server.listen(port, () => {
+//    console.log('Server is running at port: ',port);
+//})
+
+let express = require('express');
+let nodemailer = require("nodemailer");
+let app = express();
+let path = require('path');
+let bodyParser = require('body-parser');
+let propertiesReader = require('properties-reader');
+let port = 8080;
+
+let props = propertiesReader(__dirname + '/.properties');
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+app.use (express.static (__dirname + '/app/content-form'));
+
+app.get('/', (req,res) => {
+    res.sendFile(path.resolve('src/app/content/content-form/content-form.component.html'));
+});
+exports.server = function() {
+    app.post('/send', (req,res) => {
+        let data = req.body;
+        console.log(data);
+        let smtpTransport = nodemailer.createTransport({
+            service: "gmail",
+            host: props.get('smtp.host'),
+            secure: props.get('smtp.secure'),
+            port: props.get('smtp.port'),
+            auth: {
+                user: props.get('smtp.user'),
+                pass: props.get('smtp.password')
+            },
+            tls: {
+                rejectUnauthorized: false
+            }
+        });
+        let mailOptions = {
+            from: data.name,
+            to: 'philoem24@gmail.com',
+            subject: data.suject,
+            text: data.message
+        };
+        console.log(mailOptions);
+        smtpTransport.sendMail(mailOptions, (error, response) => {
+            if(error){
+                console.log("Email could not send due to error: " +error);
+            res.end("error");
+            }else {
+                console.log("Message sent: " + data.message);
+            res.end("sent");
+            }
+        });
+    });
+    
+    /*--------------------Routing Over----------------------------*/
+    
+    app.listen(port, () => {
+        console.log("Server Started on port : "+ port);
+    });
+};

@@ -47,15 +47,16 @@ export class ContentFormComponent implements OnInit {
       <div>Message: ${message}</div>
     `;
     let formRequest = { name, mail, message, date, html };
-    //if(this.contentForm.valid) {
-      firebase.database().ref('/messages').push(formRequest);
     
-      this.contactsService.createNewContact(newContent);
-      this.router.navigate(['/content/form']);
-      this.isAvalaible = true;
-    //}
-
+    firebase.database().ref('/messages').push(formRequest);
+  
+    this.contactsService.createNewContact(newContent);
+    this.router.navigate(['/content/form']);
+    this.isAvalaible = true;
+    
     this.contentForm.reset();
+
+    
 
   }
   
