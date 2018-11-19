@@ -1,4 +1,33 @@
-footer
+#pied_page
 {
-    
+    height: 7%;
+}
+#myWebSite
+{
+    font-size: 1.2em;
+    font-style: italic;
+}
+a
+{
+    text-decoration: none;
+    cursor: hand;
+}
+span a
+{
+    position: relative;
+    color: rgba(0, 123, 182, 1);
+    margin-left: 20px;
+    vertical-align: middle;
+}
+#privacy
+{
+    right: 0;
+    top: 50%;
+    transform: translate(-5%, -50%);
+}
+#legality
+{
+    left: 0;
+    top: 50%;
+    transform: translate(+5%, -50%);
 }

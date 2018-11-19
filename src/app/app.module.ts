@@ -14,6 +14,8 @@ import { ProfilComponent } from './content/profil/profil.component';
 import { ContactService } from './services/contact.service';
 import { MailService } from './services/mail.service';
 import { FooterComponent } from './footer/footer.component';
+import { PrivacyComponent } from './footer/privacy/privacy.component';
+import { LegalityComponent } from './footer/legality/legality.component';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
@@ -21,6 +23,8 @@ const appRoutes: Routes = [
   { path: 'content/list', component: ContentListComponent },
   { path: 'content/form', component: ContentFormComponent },
   { path: 'content/boost', component: BoostComponent },
+  { path: 'content/privacy', component: PrivacyComponent },
+  { path: 'content/legality', component: LegalityComponent },
   { path: '', redirectTo: 'content', pathMatch: 'full' },
   { path: '**', redirectTo: 'content' }
 
@@ -35,7 +39,9 @@ const appRoutes: Routes = [
     ContentFormComponent,
     BoostComponent,
     ProfilComponent,
-    FooterComponent
+    FooterComponent,
+    PrivacyComponent,
+    LegalityComponent
   ],
   imports: [
     BrowserModule,

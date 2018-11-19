@@ -1,0 +1,37 @@
+// Déclaration Font Lobster
+$font_lobster: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+// Déclaration Font Roboto
+$font_roboto: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+.jumbotron
+{
+    position: relative;
+    top: 0;
+    margin: 5%;
+    height: 100%;
+    background: rgba(170, 168, 168, 0.301);
+    color: rgba(255, 255, 255, 0.973);
+    font-family: $font_roboto;
+    border-radius: 8px;
+    padding-bottom: 15px;
+    animation: bounceInUp 1.5s;
+}
+h1
+{
+    font-family: $font_lobster;
+    animation: bounceInDown 2s;
+    letter-spacing: 1.5px;
+}
+.my-3
+{
+    background-color: rgba(207, 204, 204, 0.966);
+    height: 1px;
+}
+.my-1
+{
+    background-color: rgba(207, 204, 204, 0.808);
+}
+li a:hover
+{
+    text-decoration: none;
+}
