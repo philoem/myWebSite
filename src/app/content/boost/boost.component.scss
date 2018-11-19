@@ -1,3 +1,8 @@
+// Déclaration Font Lobster
+$font_lobster: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+// Déclaration Font Roboto
+$font_roboto: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 .jumbotron
 {
     position: relative;
@@ -5,14 +10,14 @@
     height: 100%;
     background: rgba(170, 168, 168, 0.301);
     color: rgba(255, 255, 255, 0.973);
-    font-family: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $font_roboto;
     border-radius: 8px;
     padding-bottom: 15px;
     animation: bounceInRight 2s;
 }
 h1
 {
-    font-family: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $font_lobster;
     animation: bounceInRight 2s;
     letter-spacing: 1.5px;
 }
@@ -23,7 +28,7 @@ h1
 .card-title
 {
     color: rgb(65, 63, 63);
-    font-family: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:$font_lobster;
 }
 p
 {

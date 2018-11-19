@@ -10,8 +10,10 @@ import { ContentComponent } from './content/content.component';
 import { ContentListComponent } from './content/content-list/content-list.component';
 import { ContentFormComponent } from './content/content-form/content-form.component';
 import { BoostComponent } from './content/boost/boost.component';
-import { ContactService } from './services/contact.service';
 import { ProfilComponent } from './content/profil/profil.component';
+import { ContactService } from './services/contact.service';
+import { MailService } from './services/mail.service';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: 'content', component: ContentComponent },
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     ContentListComponent,
     ContentFormComponent,
     BoostComponent,
-    ProfilComponent
+    ProfilComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ContactService],
+  providers: [ContactService, MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Content } from 'src/app/models/content.model';
 import { ContactService } from 'src/app/services/contact.service';
+import { MailService } from 'src/app/services/mail.service';
 import * as firebase from 'firebase';
 
 @Component({
@@ -15,7 +16,7 @@ export class ContentFormComponent implements OnInit {
   contentForm: FormGroup;
   isAvalaible = false;
    
-  constructor(private formBuilder: FormBuilder, private router: Router, private contactsService: ContactService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private contactsService: ContactService, private mailService: MailService) { }
 
   ngOnInit() {
     this.initForm();
@@ -32,7 +33,7 @@ export class ContentFormComponent implements OnInit {
   }
   
 
-  onSaveContentForm() {
+  onSaveContentForm(form) {
     const name = this.contentForm.get('name').value;
     const society = this.contentForm.get('society').value;
     const mail = this.contentForm.get('mail').value;
@@ -53,6 +54,14 @@ export class ContentFormComponent implements OnInit {
     this.contactsService.createNewContact(newContent);
     this.router.navigate(['/content/form']);
     this.isAvalaible = true;
+
+    this.mailService.sendMessage(form).subscribe(() => {
+      console.log('Message envoyé !');
+      },
+      (error) => {
+        console.log('Erreur: ' + error);
+      }
+    );
     
     this.contentForm.reset();
 

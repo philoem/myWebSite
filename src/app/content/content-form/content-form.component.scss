@@ -1,29 +1,36 @@
+// Déclaration couleur texte
+$color_text: rgba(192, 189, 189, 0.8);
+// Déclaration Font Lobster
+$font_lobster: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+// Déclaration Font Roboto
+$font_roboto: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 .contact_form
 {
     position: relative;
     top: 50px;
     background: rgba(0,0,0,0.6);
     box-shadow: 0px 0px 10px 3px grey;
-    font-family: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $font_lobster;
     padding-bottom: 7px;
     border-radius: 8px;
 }
 h2
 {
     position: relative;
-    color: rgba(192, 189, 189, 0.8);
+    color: $color_text;
 }
 address, p
 {
-    font-family: 'roboto';
     position: relative;
-    color: rgba(192, 189, 189, 0.8);
+    font-family: $font_roboto;
+    color: $color_text;
 }
 .message_confirm
 {
-    font-family: 'roboto';
     position: relative;
-    color: rgba(192, 189, 189, 0.8);
+    font-family: $font_roboto;
+    color: $color_text;
     font-size: 1.6em;
 }
 hr
@@ -33,27 +40,27 @@ hr
 h1
 {
     text-align: center;
-    color: rgba(192, 189, 189, 0.9);
+    color: $color_text;
     word-spacing: 4px;
 }
 label
 {
-    color: rgba(192, 189, 189, 0.8);
+    color: $color_text;
     word-spacing: 2px;
-    font-family: 'roboto';
+    font-family: $font_roboto;
 }
 h4
 {
-    font-family: 'roboto';
+    font-family: $font_roboto;
     font-size: 1.2em;
     font-weight: 700;
-    color: rgba(192, 189, 189, 0.9);
+    color: $color_text;
 }
 #mailOk p
 {
     top: 50px;
     position: relative;
-    font-family: 'roboto';
+    font-family: $font_roboto;
     font-weight: 700;
     color: rgb(255, 255, 255);
 }
