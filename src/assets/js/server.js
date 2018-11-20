@@ -37,7 +37,7 @@ exports.server = function() {
         });
         let mailOptions = {
             from: data.name + data.mail,
-            to: 'philoem24@gmail.com',
+            to: 'philippe.chamard78@gmail.com',
             subject: data.suject,
             text: data.message,
             html: `
