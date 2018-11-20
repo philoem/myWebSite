@@ -5,7 +5,7 @@ let path = require('path');
 let bodyParser = require('body-parser');
 let propertiesReader = require('properties-reader');
 let cors = require('cors');
-let port = 8080;
+let port = 4200;
 
 let props = propertiesReader(__dirname + '/.properties');
 let app = express();
@@ -36,10 +36,16 @@ exports.server = function() {
             }
         });
         let mailOptions = {
-            from: data.name,
+            from: data.name + data.mail,
             to: 'philoem24@gmail.com',
             subject: data.suject,
-            text: data.message
+            text: data.message,
+            html: `
+            <strong>Nom:</strong> ${data.name} <br/>
+            <strong>Société:</strong> ${data.society} <br/>
+            <strong>Email:</strong> ${data.mail} <br/>
+            <strong>Sujet:</strong> ${data.suject} <br/>
+            <strong>Message:</strong> ${data.message}`
         };
         console.log(mailOptions);
         smtpTransport.sendMail(mailOptions, (error, response) => {

@@ -42,7 +42,7 @@
           <textarea class="form-control" formControlName="message" rows="9" name="message" ngModel></textarea>
         </div>
         <div class="row justify-content-center">
-          <button class="btn btn-outline-info btn-lg z-depth-5" [disabled]="contentForm.invalid" type="submit" (click)="onSaveContentForm()" id="send">Envoyer</button>
+          <button class="btn btn-outline-info btn-lg z-depth-5" [disabled]="contentForm.invalid" type="submit" (click)="onSaveContentForm(form.value)" id="send">Envoyer</button>
         </div>
       </div>
     </div>

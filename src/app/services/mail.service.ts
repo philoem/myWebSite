@@ -7,7 +7,7 @@ export class MailService {
     constructor(private http: HttpClient){}
 
     sendMessage(body) {
-        return this.http.post('http://localhost:8080/content/form', body);
+        return this.http.post('http://localhost:4200/content/form', body);
     }
 
 }
