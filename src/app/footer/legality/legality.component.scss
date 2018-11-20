@@ -5,10 +5,10 @@ $font_roboto: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', '
 
 .jumbotron
 {
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 5%;
     margin: 5%;
-    height: 100%;
+    height: auto;
     background: rgba(170, 168, 168, 0.301);
     color: rgba(255, 255, 255, 0.973);
     font-family: $font_roboto;
