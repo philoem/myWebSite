@@ -31,3 +31,108 @@ span a
     top: 50%;
     transform: translate(+5%, -50%);
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    #pied_page
+    {
+        font-size: 0.9em;
+        height: 10%;
+    }
+    #legality
+    {
+        margin-top: 5%;
+        font-size: 1em;
+    }
+    #privacy
+    {
+        margin-top: 5%;
+        margin-right: 0;
+        font-size: 1em;
+    }
+}
+@media screen and (min-width: 401px) and (max-width: 767px) {
+
+    #pied_page
+    {
+        font-size: 0.9em;
+        height: 12%;
+    }
+    #legality
+    {
+        margin-top: 13%;
+        font-size: 0.9em;
+    }
+    #privacy
+    {
+        margin-top: 13%;
+        margin-right: 0;
+        font-size: 0.9em;
+    }
+
+}
+@media screen and (min-width: 361px) and (max-width: 400px) {
+
+    #pied_page
+    {
+        font-size: 0.9em;
+        height: 15%;
+    }
+    #legality
+    {
+        margin-top: 13%;
+        margin-left: 50%;
+        transform: translate(50%, -50%);
+        font-size: 1.5em;
+    }
+    #privacy
+    {
+        margin-top: 38%;
+        margin-right: -50%;
+        transform: translate(-65%, -50%);
+        font-size: 1.5em;
+    }
+
+}
+@media screen and (min-width: 301px) and (max-width: 360px) {
+
+    #pied_page
+    {
+        font-size: 0.8em;
+        height: 15%;
+    }
+    #legality
+    {
+        margin-top: 15%;
+        margin-left: 50%;
+        transform: translate(50%, -50%);
+    }
+    #privacy
+    {
+        margin-top: 40%;
+        margin-right: -50%;
+        transform: translate(-65%, -50%);
+    }
+}
+@media screen and (max-width: 300px) {
+
+    #pied_page
+    {
+        font-size: 0.6em;
+        height: 15%;
+    }
+    #legality
+    {
+        margin-top: 15%;
+        margin-left: 50%;
+        transform: translate(50%, -50%);
+        font-size: 1.5em;
+    }
+    #privacy
+    {
+        margin-top: 55%;
+        margin-right: -50%;
+        transform: translate(-75%, -50%);
+        font-size: 1.5em;
+    }
+
+}

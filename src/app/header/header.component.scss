@@ -1,6 +1,7 @@
 #navBar
 {
     height: 95px;
+    width: 100%;
     background-color: rgba(5, 77, 140, 0.644);
     font-size: 1.2em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.452);
@@ -74,6 +75,13 @@ button
         display: none;
     }
 }
+@media screen and (max-width: 404px) {
 
+    #title_navbar
+    {
+        font-size: 0.8em;
+        margin-left: -20%;
+    }
+}
 
 

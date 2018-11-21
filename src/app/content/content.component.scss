@@ -22,6 +22,10 @@ h3
 {
     top: 50px;
 }
+img
+{
+    position: absolute;
+}
 a
 {
     font-family: 'roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -52,4 +56,30 @@ a:hover
         display: none;
     }
     
+}
+@media screen and (min-width: 286px) and (max-width: 633px) {
+
+    .container
+    {
+        margin: 0;
+    }
+    #text_homepage
+    {
+        margin-top: 55%;
+        font-size: 0.7em;
+    }
+    
+}
+@media screen and (max-width: 285px) {
+
+    #text_homepage
+    {
+        margin-top: 55%;
+        font-size: 0.7em;
+    }
+    .container
+    {
+        margin: 0;
+    }
+
 }
