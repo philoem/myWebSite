@@ -1,3 +1,5 @@
+@import "./src/styles.scss";
+
 #navBar
 {
     height: 95px;
@@ -5,7 +7,7 @@
     background-color: rgba(5, 77, 140, 0.644);
     font-size: 1.2em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.452);
-    font-family: 'roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $font_roboto;
 }
 nav a, ul li a, .navbar-text
 {
@@ -62,7 +64,7 @@ button
     background-color: rgba(98, 165, 223, 0.781);
 }
 
-@media screen and (max-width: 991px) {
+@media only screen and (min-width: 316px) and (max-width: 1024px) {
 
     #navbarText
     {
@@ -70,17 +72,39 @@ button
         display: block;
         position: absolute;
     }
+    #title_navbar
+    {
+        font-size: 1em;
+        margin-left: -20%;
+    }
+    #navbar
+    {
+        display: block;
+    }
     #navbarText > ul > li, img, #myName
     {
         display: none;
     }
+    #navbarToggleExternalContent
+    {
+        top: 95px;
+    }
 }
-@media screen and (max-width: 404px) {
+@media only screen and (min-width: 280px) and (max-width: 315px) {
 
     #title_navbar
     {
         font-size: 0.8em;
-        margin-left: -20%;
+        margin-left: -15%;
+    }
+    #navbarToggleExternalContent
+    {
+        top: 95px;
+
+    }
+    ul > li > a
+    {
+        margin-left: -15%;
     }
 }
 

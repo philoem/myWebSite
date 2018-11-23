@@ -22,5 +22,6 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     document.body.style.background = "url('/assets/img/color1.png') top center no-repeat fixed";
+    
   }
 }

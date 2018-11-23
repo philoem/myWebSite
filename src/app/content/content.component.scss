@@ -1,6 +1,8 @@
+@import "./src/styles.scss";
+
 .container
 {
-    font-family: 'lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $font_lobster;
     margin: 120px;
 }
 h1
@@ -28,7 +30,7 @@ img
 }
 a
 {
-    font-family: 'roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $font_roboto;
     position: relative;
     margin: 10px;
     top: 0;
@@ -49,7 +51,7 @@ a:hover
                 0 0 0 960px rgba(176,255,95,.1),
                 0 0 0 1920px rgba(176,255,95,.1);
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1687px) {
 
     img
     {
@@ -57,7 +59,7 @@ a:hover
     }
     
 }
-@media screen and (min-width: 286px) and (max-width: 633px) {
+@media screen and (min-width: 360px) and (max-width: 633px) {
 
     .container
     {
@@ -65,17 +67,46 @@ a:hover
     }
     #text_homepage
     {
-        margin-top: 55%;
+        margin-top: 40%;
         font-size: 0.7em;
+    }
+    .btn
+    {
+        font-size: 0.7em;
+        top: -65%;
+        left: -5%;
+        padding: 15px;
+    }
+    strong
+    {
+        font-size: 2.5em;
+        color: rgb(46, 45, 45);
+        font-style: italic;
+        text-shadow: 2px 2px 8px #FF0000;
     }
     
 }
-@media screen and (max-width: 285px) {
+@media only screen and (max-width: 359px) {
 
     #text_homepage
     {
-        margin-top: 55%;
+        margin-top: 38%;
+        margin-left: -10%;
+        font-size: 0.5em;
+    }
+    .btn
+    {
         font-size: 0.7em;
+        top: -70%;
+        left: -5%;
+        padding: 15px;
+    }
+    strong
+    {
+        font-size: 2.5em;
+        color: rgb(46, 45, 45);
+        font-style: italic;
+        text-shadow: 2px 2px 8px #FF0000;
     }
     .container
     {

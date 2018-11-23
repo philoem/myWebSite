@@ -1,13 +1,11 @@
-// Déclaration Font Lobster
-$font_lobster: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-// Déclaration Font Roboto
-$font_roboto: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+@import "./src/styles.scss";
 
 .jumbotron
 {
-    position: absolute;
+    position: relative;
     top: 5%;
     margin: 5%;
+    margin-top: 6%;
     height: auto;
     background: rgba(170, 168, 168, 0.301);
     color: rgba(255, 255, 255, 0.973);
@@ -34,4 +32,81 @@ h1
 li a:hover
 {
     text-decoration: none;
+}
+@media only screen and (min-width: 1025px) and (max-width: 1583px) {
+
+    .jumbotron
+    {
+        margin-top: 12%;
+    }
+    h1, h4, h5, p
+    {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 851px) and (max-width: 1024px) {
+
+    .jumbotron
+    {
+        margin-top: 15%;
+    }
+    h1, h4, h5, p
+    {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 701px) and (max-width: 850px) {
+
+    .jumbotron
+    {
+        margin-top: 22%;
+    }
+    h1, h4, h5, p
+    {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 564px) and (max-width: 700px) {
+
+    .jumbotron
+    {
+        margin-top: 22%;
+    }
+    h1, h4, h5, p
+    {
+        text-align: center;
+    }
+
+}
+@media only screen and (min-width: 431px) and (max-width: 563px) {
+
+    .jumbotron
+    {
+        margin-top: 30%;
+    }
+    h1, h4, h5, p
+    {
+        text-align: center;
+    }
+
+
+}
+
+@media only screen and (max-width: 430px) {
+
+    .jumbotron
+    {
+        margin-top: 45%;
+    }
+    h1, h4, h5, p
+    {
+        text-align: center;
+    }
+
 }

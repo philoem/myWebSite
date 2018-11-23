@@ -1,14 +1,9 @@
-// Déclaration couleur texte
-$color_text: rgba(192, 189, 189, 0.8);
-// Déclaration Font Lobster
-$font_lobster: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-// Déclaration Font Roboto
-$font_roboto: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+@import "./src/styles.scss";
 
 .contact_form
 {
     position: relative;
-    top: 50px;
+    top: 120px;
     background: rgba(0,0,0,0.6);
     box-shadow: 0px 0px 10px 3px grey;
     font-family: $font_lobster;

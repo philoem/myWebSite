@@ -1,11 +1,9 @@
-// Déclaration Font Lobster
-$font_lobster: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-// Déclaration Font Roboto
-$font_roboto: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+@import "./src/styles.scss";
 
 .jumbotron
 {
     position: relative;
+    top: 50px;
     margin: 5%;
     height: 100%;
     background: rgba(170, 168, 168, 0.301);
@@ -25,7 +23,7 @@ h1
 {
     background-color: rgba(207, 204, 204, 0.808);
 }
-.card-title
+.card-title, .card-title-back
 {
     color: rgb(65, 63, 63);
     font-family:$font_lobster;
@@ -122,7 +120,7 @@ span
 {
     transform: rotateX(0deg);
 }
-@media screen and (max-width: 1679px)
+@media only screen and (min-width: 1401px) and (max-width: 2200px)
 {
     .first
     {
@@ -145,8 +143,27 @@ span
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    #cogs_title
+    {
+        position: relative;
+        top: 5px;
+        left: 50%;
+        transform: translate(-60%, -50%);
+    }
+    .card-title
+    {
+        position: relative;
+        top: 5px;
+        left: 50%;
+        transform: translate(-60%, -50%);
+        text-align: center;
+    }
+    .card-title-back
+    {
+        text-align: center;
+    }
 }
-@media screen and (max-width: 1400px)
+@media only screen and (min-width: 1347px) and (max-width: 1400px)
 {
     .first
     {
@@ -169,10 +186,21 @@ span
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    h1, p
+    {
+        text-align: center;
+    }
+    .card-title-back
+    {
+        text-align: center;
+    }
 }
-@media screen and (max-width: 1346px)
+@media only screen and (min-width: 917px) and (max-width: 1346px)
 {
-    
+    .jumbotron
+    {
+        top: 70px;
+    }
     #cogs
     {
         position: absolute;
@@ -180,9 +208,43 @@ span
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    #cogs_title
+    {
+        position: relative;
+        top: 5px;
+        left: 50%;
+        transform: translate(-67%, -50%);
+    }
+    .card-title
+    {
+        position: relative;
+        top: 20px;
+        left: 50%;
+        transform: translate(-70%, -50%);
+        text-align: center;
+    }
+    .card-title-back
+    {
+        text-align: center;
+    }
+    h1, p
+    {
+        text-align: center;
+    }
 }
-@media screen and (max-width: 916px)
+@media only screen and (min-width: 723px) and (max-width: 916px)
 { 
+    .jumbotron
+    {
+        top: 70px;
+    }
+    #cogs_title
+    {
+        position: relative;
+        top: 5px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     .first
     {
         position: relative;
@@ -193,14 +255,31 @@ span
     #cogs
     {
         position: absolute;
-        top: 195px;
+        top: 100px;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .card-title
+    {
+        font-size: 1.6em;
+        text-align: center;
+    }
+    .card-title-back
+    {
+        text-align: center;
+    }
+    h1, p
+    {
+        text-align: center;
+    }
     
 }
-@media screen and (max-width: 722px)
+@media only screen and (min-width: 574px) and (max-width: 722px)
 {  
+    .jumbotron
+    {
+        top: 102px;
+    }
     .first
     {
         position: relative;
@@ -208,22 +287,46 @@ span
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    h1, p
+    {
+        text-align: center;
+    }
+    .card-title
+    {
+        position: relative;
+        top: 130px;
+        left: 50%;
+        transform: translate(-77%, -50%);
+        text-align: center;
+    }
+    .card-title-back
+    {
+        text-align: center;
+    }
 }
-@media screen and (max-width: 573px)
+@media only screen and (max-width: 573px)
 { 
+    .jumbotron
+    {
+        top: 100px;
+    }
+    h1, p
+    {
+        text-align: center;
+    }
     .first
     {
         position: relative;
         top: 0;
         left: 50%;
-        transform: translate(-40%, -50%);
+        transform: translate(-23%, -50%);
     }
     #cogs_title
     {
         position: relative;
         top: 15px;
         left: 50%;
-        transform: translate(-25%, -50%);
+        transform: translate(-77%, -50%);
     }
     #cogs
     {
@@ -231,6 +334,18 @@ span
         top: 0;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    .card-title
+    {
+        position: relative;
+        top: 50px;
+        left: 50%;
+        transform: translate(-77%, -50%);
+        text-align: center;
+    }
+    .card-title-back
+    {
+        text-align: center;
     }
     
 }

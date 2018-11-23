@@ -1,6 +1,8 @@
+@import "./src/styles.scss";
+
 .container
 {
-    margin-top: 60px;
+    margin-top: 7%;
 }
 h1
 {
@@ -8,7 +10,7 @@ h1
     text-align: center;
     color: rgb(231, 229, 229);
     word-spacing: 4px;
-    font-family: 'Lobster','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: $font_lobster;
 }
 h5
 {
@@ -51,4 +53,159 @@ h5
 .carousel-indicators
 {
     bottom: -45px;
+}
+@media only screen and (min-width: 1025px) {
+
+    .carousel
+    {
+        transform: scale(0.7);
+    }
+    .carousel-inner
+    {
+        margin-top: -8%;
+    }
+    .container
+    {
+        margin-top: 10%;
+        margin-left: 4%;
+    }
+    .carousel-control-prev
+    {
+        left: -90px;
+        border-radius: 8px;
+    }
+    .carousel-control-next
+    {
+        right: -90px;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (min-width: 881px) and (max-width: 1024px) {
+
+    .carousel
+    {
+        transform: scale(0.8);
+    }
+    .carousel-inner
+    {
+        margin-top: -5%;
+    }
+    .container
+    {
+        margin-top: 12%;
+        margin-left: 8%;
+    }
+    .carousel-control-prev
+    {
+        left: -90px;
+        border-radius: 8px;
+    }
+    .carousel-control-next
+    {
+        right: -90px;
+        border-radius: 8px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 880px) {
+
+    .carousel
+    {
+        transform: scale(0.8);
+    }
+    .carousel-inner
+    {
+        margin-top: -5%;
+    }
+    .container
+    {
+        margin-top: 15%;
+        margin-left: 3%;
+    }
+    .carousel-control-prev
+    {
+        left: -90px;
+        border-radius: 8px;
+    }
+    .carousel-control-next
+    {
+        right: -90px;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (min-width: 681px) and (max-width: 767px) {
+
+    .container
+    {
+        margin-top: 15%;
+        margin-left: 5%;
+    }
+    .carousel-control-prev
+    {
+        left: -65px;
+        border-radius: 8px;
+    }
+    .carousel-control-next
+    {
+        right: -65px;
+        border-radius: 8px;
+    }
+}
+@media only screen and (min-width: 605px) and (max-width: 680px) {
+
+    .container
+    {
+        margin-top: 20%;
+        margin-left: 3%;
+    }
+    .carousel-control-prev
+    {
+        left: -55px;
+        border-radius: 8px;
+    }
+    .carousel-control-next
+    {
+        right: -55px;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (min-width: 466px) and (max-width: 604px) {
+
+    .container
+    {
+        margin-top: 20%;
+        margin-left: 0;
+    }
+    .carousel-control-prev
+    {
+        left: -55px;
+        border-radius: 8px;
+    }
+    .carousel-control-next
+    {
+        right: -55px;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (max-width: 465px) {
+
+    .container
+    {
+        margin-top: 35%;
+        margin-left: 0;
+    }
+    .carousel-control-prev
+    {
+        left: -40px;
+        border-radius: 8px;
+    }
+    .carousel-control-next
+    {
+        right: -40px;
+        border-radius: 8px;
+    }
+
 }
